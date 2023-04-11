@@ -2,9 +2,6 @@ import requests
 import sys
 import json
 import openai
-
- 
-
 def chat_with_chatgpt(prompt):
     conversation = []
     conversation.append({'role':'user','content':str({prompt})})
