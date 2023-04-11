@@ -3,10 +3,10 @@ import sys
 import json
 import openai
 def chat_with_chatgpt(prompt):
-    conversation = []
-    conversation.append({'role':'user','content':str({prompt})})
-    review = openai.ChatCompletion.create(model=model_id, messages=conversation)
-    return review.choices[0].message.content
+    conversation = []
+    conversation.append({'role':'user','content':str({prompt})})
+    review = openai.ChatCompletion.create(model=model_id, messages=conversation)
+    return review.choices[0].message.content
 
  
 
