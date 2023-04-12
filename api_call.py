@@ -22,12 +22,15 @@ def post_review(headers, url2, chatgpt_response, fileName):
         print('\nReview posted successfully')
     else:
         print('\nError posting review: {}'.format(git_response.text))
-
-openai.api_key = os.environ['SECRET_OPENAI_TOKEN']
+        
+SECRET_OPENAI_TOKEN = os.environ['SECRET_OPENAI_TOKEN']
+print(SECRET_OPENAI_TOKEN)
+openai.api_key = SECRET_OPENAI_TOKEN
 model_id="gpt-3.5-turbo"
 
 # Authenticate with Github API
 SECRET_GITHUB_KEY = os.environ['SECRET_GITHUB_KEY']
+print(SECRET_GITHUB_KEY)
 headers = {'Authorization':'Token ' + SECRET_GITHUB_KEY}
 
 #PR details
