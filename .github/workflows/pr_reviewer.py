@@ -50,7 +50,7 @@ pull_number = mycmd.stdout.split('url')[1].split('/')[7].split('"')[0]
 
 #Endpoints
 url1 = f'https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}'
-
+print(url1)
 url2 = f"https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}"
 
 #PR details
