@@ -26,4 +26,4 @@ jobs:
         env:
            SECRET_GITHUB_KEY: ${{ secrets.SECRET_GITHUB_KEY }}
            SECRET_OPENAI_TOKEN: ${{ secrets.SECRET_OPENAI_TOKEN }}
-        run: python api_call.py
+        run: python .github/workflows/pr_reviewer.py
