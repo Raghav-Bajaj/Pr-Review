@@ -1,6 +1,7 @@
 <img align="center" height="400" src="https://github.com/Raghav-Bajaj/My-Programs/blob/main/pic1111.png"/>
 
-
+## Introduction
+- This project aims to utilize OpenAI's natural language processing capabilities to assist PR reviewers in analyzing code changes and providing feedback to developers on GitHub pull requests.
 
 ## THE IDEA - OPTIMIZE OUR WAYS OF WORKING
 - A PR code review takes anywhere between 6 hours to 48 hours depending on the volume and complexity of changes
@@ -26,14 +27,14 @@
 - The solution can be adopted across the complete development community.
 
 ## What features in MVP 
--Review JAVA
--Custom rule to check for Copyright
--Does not reuse conversations
+- Review JAVA
+- Custom rule to check for Copyright
+- Does not reuse conversations
 
 ## Future enhancements
--Support for more programming languages
--Translate the diff of pull request into a summary that can be pasted into changelog
--Generate comments on-demand
--Notifications in Slack, per email or via a custom webhook
+- Support for more programming languages
+- Translate the diff of pull request into a summary that can be pasted into changelog
+- Generate comments on-demand
+- Notifications in Slack, per email or via a custom webhook
 
 ## How to execute locally ?
