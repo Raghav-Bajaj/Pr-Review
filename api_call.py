@@ -22,11 +22,11 @@ def post_review(headers, url2, chatgpt_response, fileName):
     else:
         print('\nError posting review: {}'.format(git_response.text))
 
-openai.api_key ="<gpt_key>"
+openai.api_key ="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"
 model_id="gpt-3.5-turbo"
 
 # Authenticate with Github API
-auth_token = '<github_key>'
+auth_token = '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'
 headers = {'Authorization':'Token ' + auth_token}
 
 #PR details
