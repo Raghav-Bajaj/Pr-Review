@@ -1,4 +1,4 @@
-name: OpenAI Reviewer
+name: PR Reviewer
 
 permissions:
   contents: read

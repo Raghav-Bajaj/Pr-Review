@@ -3,6 +3,14 @@ import sys
 import json
 import openai
 import os
+import subprocess
+
+ACCOUNT_GITHUB_TOKEN = os.environ['ACCOUNT_GITHUB_TOKEN']
+REPO_NAME = os.environ['REPO_NAME']
+REPO_OWNER = os.environ['REPO_OWNER']
+
+mycmd=subprocess.run(f'curl -v --silent https://{ACCOUNT_GITHUB_TOKEN}:x-oauth-basic@api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls 2>&1 | grep -E -w "url|head|ref|base" | head -n 12', shell=True, capture_output=True, text=True)
+
 
 def chat_with_chatgpt(prompt):
     conversation = []
@@ -34,11 +42,11 @@ print(SECRET_GITHUB_KEY)
 headers = {'Authorization':'Token ' + SECRET_GITHUB_KEY}
 
 #PR details
-owner = "Raghav-Bajaj"
-repo = "Pr-Review"
-base = 'main'
-head = 'my-branch'
-pull_number=4
+owner = {REPO_OWNER}
+repo = {REPO_NAME}
+base = mycmd.stdout.split('ref')[3].split('"')[2]
+head = mycmd.stdout.split('ref')[1].split('"')[2]
+pull_number = mycmd.stdout.split('url')[1].split('/')[7].split('"')[0]
 
 #Endpoints
 url1 = f'https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}'
