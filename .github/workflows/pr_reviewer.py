@@ -42,8 +42,8 @@ print(SECRET_GITHUB_KEY)
 headers = {'Authorization':'Token ' + SECRET_GITHUB_KEY}
 
 #PR details
-owner = {REPO_OWNER}
-repo = {REPO_NAME}
+owner = f'{REPO_OWNER}'
+repo = f'{REPO_NAME}'
 base = mycmd.stdout.split('ref')[3].split('"')[2]
 head = mycmd.stdout.split('ref')[1].split('"')[2]
 pull_number = mycmd.stdout.split('url')[1].split('/')[7].split('"')[0]
