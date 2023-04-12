@@ -26,7 +26,7 @@ openai.api_key ="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"
 model_id="gpt-3.5-turbo"
 
 # Authenticate with Github API
-auth_token = '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'
+auth_token = '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'
 headers = {'Authorization':'Token ' + auth_token}
 
 #PR details
@@ -34,7 +34,7 @@ owner = "Raghav-Bajaj"
 repo = "Pr-Review"
 base = 'main'
 head = 'my-branch'
-pull_number=4
+pull_number=12
 
 #Endpoints
 url1 = f'https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}'
