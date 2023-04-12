@@ -26,7 +26,7 @@ openai.api_key ="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"
 model_id="gpt-3.5-turbo"
 
 # Authenticate with Github API
-auth_token = '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'
+auth_token = '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'
 headers = {'Authorization':'Token ' + auth_token}
 
 #PR details
