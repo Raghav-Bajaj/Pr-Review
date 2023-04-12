@@ -2,6 +2,7 @@ import requests
 import sys
 import json
 import openai
+import os
 
 def chat_with_chatgpt(prompt):
     conversation = []
@@ -22,12 +23,12 @@ def post_review(headers, url2, chatgpt_response, fileName):
     else:
         print('\nError posting review: {}'.format(git_response.text))
 
-openai.api_key ="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"
+openai.api_key = os.environ['SECRET_OPENAI_TOKEN']
 model_id="gpt-3.5-turbo"
 
 # Authenticate with Github API
-auth_token = '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'
-headers = {'Authorization':'Token ' + auth_token}
+SECRET_GITHUB_KEY = os.environ['SECRET_GITHUB_KEY']
+headers = {'Authorization':'Token ' + SECRET_GITHUB_KEY}
 
 #PR details
 owner = "Raghav-Bajaj"
