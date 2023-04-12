@@ -5,9 +5,9 @@ import openai
 import os
 import subprocess
 
-ACCOUNT_GITHUB_TOKEN = os.environ['ACCOUNT_GITHUB_TOKEN']
-REPO_NAME = os.environ['REPO_NAME']
-REPO_OWNER = os.environ['REPO_OWNER']
+ACCOUNT_GITHUB_TOKEN = os.getenv('ACCOUNT_GITHUB_TOKEN')
+REPO_NAME = os.getenv('REPO_NAME')
+REPO_OWNER = os.getenv('REPO_OWNER')
 
 mycmd=subprocess.run(f'curl -v --silent https://{ACCOUNT_GITHUB_TOKEN}:x-oauth-basic@api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls 2>&1 | grep -E -w "url|head|ref|base" | head -n 12', shell=True, capture_output=True, text=True)
 
